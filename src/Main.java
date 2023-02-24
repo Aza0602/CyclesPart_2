@@ -5,6 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -51,6 +52,23 @@ public class Main {
             y += y * fertility /people - y * mortality / people;
             System.out.println("«Год " + firstYear + ", численность населения составляет " + numberFormat.format(y)  + "».");
             firstYear++;
+        }
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        int result = 12_000_000;
+        double deposit = 15_000;
+        int month = 1;
+        double percent = 0.07;
+        while (deposit <= result) {
+            deposit = deposit * (1 + percent);
+
+            System.out.println("«Месяц " + month + ", сумма накоплений равна " + numberFormat.format((int) deposit) + " рублей».");
+            month++;
+
         }
     }
 
