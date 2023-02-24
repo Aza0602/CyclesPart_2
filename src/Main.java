@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -37,7 +38,21 @@ public class Main {
         System.out.println();
     }
 
+    public static void task3() {
+        System.out.println("Задача 3");
 
+        int y = 12_000_000;
+        int people = 1000;
+        int fertility = 17;
+        int mortality = 8;
+        int firstYear = 1;
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        while (firstYear <= 10) {
+            y += y * fertility /people - y * mortality / people;
+            System.out.println("«Год " + firstYear + ", численность населения составляет " + numberFormat.format(y)  + "».");
+            firstYear++;
+        }
+    }
 
 }
 
