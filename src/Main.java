@@ -9,6 +9,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1() {
@@ -119,6 +120,22 @@ public class Main {
         while (firstFriday <= 31) {
             System.out.println("«Сегодня пятница, " + firstFriday +"-е число. Необходимо подготовить отчет».");
             firstFriday += 7;
+        }
+    }
+
+    public static void task8() {
+        System.out.println("Задача 8");
+
+        int firstYear = 0;
+        int period = 79;
+        int currentYear = 2023;
+        int start = currentYear - 200;
+        int end = currentYear + 100;
+
+        for (int year = start; year < end; year++) {
+            if (year % period == firstYear) {
+                System.out.println(year);
+            }
         }
     }
 
