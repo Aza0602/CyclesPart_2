@@ -8,6 +8,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -108,6 +109,16 @@ public class Main {
             }
             month++;
 
+        }
+    }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+
+        int firstFriday = 3;
+        while (firstFriday <= 31) {
+            System.out.println("«Сегодня пятница, " + firstFriday +"-е число. Необходимо подготовить отчет».");
+            firstFriday += 7;
         }
     }
 
