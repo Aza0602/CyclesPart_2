@@ -7,6 +7,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -82,6 +83,25 @@ public class Main {
         int month = 1;
         double percent = 0.07;
         while (deposit <= result) {
+            deposit = deposit * (1 + percent);
+            if (month % 6 == 0) {
+                System.out.println("«Месяц " + month + ", сумма накоплений равна " + numberFormat.format((int) deposit) + " рублей».");
+            }
+            month++;
+
+        }
+    }
+
+    public static void task6() {
+        System.out.println("Задача 6");
+
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+
+        double deposit = 15_000;
+        int months = 12 * 9;
+        int month = 1;
+        double percent = 0.07;
+        while (month <= months) {
             deposit = deposit * (1 + percent);
             if (month % 6 == 0) {
                 System.out.println("«Месяц " + month + ", сумма накоплений равна " + numberFormat.format((int) deposit) + " рублей».");
